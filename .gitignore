@@ -63,3 +63,6 @@ buck-out/
 
 #keys
 android/app/src/main/res/values/strings.xml
+
+#assets
+android/app/src/main/assets
