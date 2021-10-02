@@ -56,11 +56,10 @@ const startSound = (
     const playingSounds = (counter: number) => {
       soundRef.current.setPan(1);
       soundRef.current.play();
-      soundCounter--;
-      if (soundCounter > 0) {
+      if (counter > 0) {
         timerRef.current = setTimeout(
-          () => playingSounds(counter),
-          soundRef.current.getDuration() * 1000,
+          () => playingSounds(counter - 1),
+          soundRef.current.getDuration() * 1000 + 100,
         );
       }
     };
